@@ -1,0 +1,23 @@
+body {
+  margin: 0
+}
+
+#app {
+  display: flex;
+  height:100vh;
+  flex-direction: column;
+  text-align: center;
+  font-size: 30px;
+}
+
+.box {
+  flex: 1;
+}
+
+.grid {
+  background: #ff6666
+}
+
+.chart {
+  background: #0add85;
+}
