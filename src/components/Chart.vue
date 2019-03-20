@@ -1,15 +1,19 @@
 <template>
   <div class="chart box">
     <h1>Chart</h1>
-    {{ selectedValue }}
+    <p>{{ selectedValue }}</p>
+    <p>{{ selectedValueDiff }}</p>
   </div>
 </template>
 
 <script>
-import { mapGetters } from 'vuex'
+import { mapState, mapGetters } from 'vuex'
 
 export default {
   computed: {
+    ...mapState({
+      selectedValueDiff: state => state.grid.selectedValue
+    }),
     ...mapGetters(['selectedValue'])
   }  
 }
