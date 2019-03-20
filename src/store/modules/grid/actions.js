@@ -1,7 +1,9 @@
 // actions.js
 
 export default {
-  setSelectedValue (context, payload) {
-    context.commit('setSelectedValue', Number(payload));
+  // state는 지역상태
+  // rootState는 전역상태
+  setSelectedValue ({ state, commit, rootState }, payload) {
+    commit('setSelectedValue', Number(payload));
   }
 }
